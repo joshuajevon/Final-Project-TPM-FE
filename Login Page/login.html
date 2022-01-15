@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+        </style>
+        <link rel="shortcut icon" type="image/png" href="logo hackathon.svg">
+
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <section id="login">
+        <div class="login2">
+            <h1>Welcome Back</h1>
+            <form name="formPendaftaran" action="daftar.php" method="post" onsubmit="return validateForm()"> 
+
+            <div class="isi">
+                <h3>Email</h3>
+                <i class='bx bx-user bx-sm'></i>
+                <input id="lol"type="email" name="email" placeholder="Please type your email here...">
+                <h3>Password</h3>
+                <i class='bx bx-lock bx-sm' ></i>
+                <input id="lol" name="pass"type="password" placeholder="Please type your password here...">
+            </div>
+            <a href="#">Forgot Password</a>
+            <div class="baten">
+            <button type="submit">Login</button>
+            </div>
+            </form>
+            <!-- <h4>Not registered yet?</h4> -->
+            <a id="dua" href="#">Not Registered yet? Register here!</a>
+        </div>
+    </section>
+
+    <script>
+        function validateForm() {
+            if (document.forms["formPendaftaran"]["email"].value == "") {
+                alert("Email Tidak Boleh Kosong");
+                document.forms["formPendaftaran"]["email"].focus();
+                return false;
+            }
+            if (document.forms["formPendaftaran"]["pass"].value == "") {
+                alert("Password is Needed!");
+                document.forms["formPendaftaran"]["pass"].focus();
+                return false;
+            }
+        }
+    </script>
+
+   
+</body>
+</html>
